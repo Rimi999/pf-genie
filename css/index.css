@@ -38,8 +38,9 @@ html, body {font-size: 16px; font-family: 'Noto Sans KR', sans-serif;}
 .navi-wrapper .sub-wrap .sub:hover {background-color: #eee;}
 
 
-/**********************  *********************/
-
+/********************** banner *********************/
+.banner-container {background-color: #e8eef3;}
+.banner-container .slide-srage {display: flex; justify-content: center;}
 
 /********************** 반응형 설정 *********************/
 @media (max-width: 1399px) {
