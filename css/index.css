@@ -87,6 +87,19 @@ html, body {font-size: 16px; font-family: 'Noto Sans KR', sans-serif;}
 .emblem-wrapper .emblem-wrap {display: flex; justify-content: space-around;}
 
 
+/********************** player-wrapperr *********************/
+
+.player-wrapper {position: fixed; z-index: 100; width: 100%; left: 0; bottom: 0;
+	background: rgba(0, 0, 0, .7); backdrop-filter: blur(6px); padding: 1em 0; color: #fff;}
+.player-wrapper .player {display: flex; justify-content: center; align-items: center;}
+.player-wrapper .player .music {display: flex; align-items: center;}
+.player-wrapper .player .music .album {margin-right: 1.5em;}
+.player-wrapper .player .play {margin: 0 3em;}
+.player-wrapper .player .play div:nth-child(1){width: 300px; border: 1px solid #fff;}
+.player-wrapper .play-ctrl {font-size: 1.75em; cursor: pointer;}
+.player-wrapper .play-ctrl .bi:hover {color: #0096FF;}
+
+
 /********************** 반응형 설정 *********************/
 @media (max-width: 1399px) {
 	.wrapper {width: calc(100% - 2rem);}
