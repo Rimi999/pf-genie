@@ -58,7 +58,33 @@ html, body {font-size: 16px; font-family: 'Noto Sans KR', sans-serif;}
 
 
 /********************** footer *********************/
+.menu-wrapper,.footer-wrapper {font-weight: 300; font-size: 0.875em;}
 
+.menu-wrapper {border-bottom: 1px solid #eee; border-bottom: 1px solid #444}
+.menu-wrapper .menu-wrap {display: flex; justify-content: space-between; align-items: center;}
+.menu-wrapper .menu-wrap .menu {display: flex;}
+.menu-wrapper .menu-wrap .menu li {padding: 0.7em .5em;}
+.menu-wrapper .menu-wrap .menu li:hover {text-decoration: underline; cursor: pointer;}
+.menu-wrapper .menu-wrap .menu li:nth-child(1) {padding-left: 0;}
+.menu-wrapper .menu-wrap .menu li:last-child {font-weight: 500;}
+.menu-wrapper .menu-wrap .sns {color: #bbb; font-size: 1.325em;}
+.menu-wrapper .menu-wrap .sns i:nth-child(1){margin-right: .5em;}
+
+.footer-wrapper {color: #777; padding-bottom: 2em;}
+.footer-wrap .link-wrap {display: flex; flex-wrap: wrap; padding: 1.5em 0;}
+.footer-wrap .link-wrap a {padding: 0 0.5em 0.5em;}
+.footer-wrap .link-wrap a:hover {color: #222; text-decoration: underline;}
+.footer-wrap .link-wrap span {padding: 0 0.5em 0.5em;}
+.footer-wrap .info-company {display: flex;}
+.footer-wrap .info-company .logo-company {margin-right: 1em;}
+.footer-wrap .info-cnt {display: flex; flex-wrap: wrap;}
+.footer-wrap .info-wrap .cnt {padding-bottom: .5em;}
+.footer-wrap .info-wrap .cnt a {color: #222;}
+.footer-wrap .info-wrap .cnt a:hover {text-decoration: underline;}
+.footer-wrap .info-wrap span {padding: 0 .5em .75em;}
+
+.emblem-wrapper {padding-top: 2em;}
+.emblem-wrapper .emblem-wrap {display: flex; justify-content: space-around;}
 
 
 /********************** 반응형 설정 *********************/
