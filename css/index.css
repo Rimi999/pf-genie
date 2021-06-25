@@ -38,6 +38,19 @@ html, body {font-size: 16px; font-family: 'Noto Sans KR', sans-serif;}
 .navi-wrapper .sub-wrap .sub:hover {background-color: #eee;}
 
 
+/********************** main-wrapper *********************/
+.recent-container {background-color: #e8eef3;}
+.recent-container .slide-stage {display: flex; justify-content: center;}
+.recent-container .slide-stage .slide-wrap {position: relative; }
+.recent-container .slide-stage .slide-wrap .slide {position: absolute;}
+
+.bt-angle {font-size: 4em; position: absolute; top: 50%; transform: translateY(-50%);
+	cursor: pointer; color: #fff; opacity: .3; transition: all .5s; z-index: 2;}
+.bt-angle:hover {opacity: 1;}
+.bt-angle.bt-prev {left: 0;}
+.bt-angle.bt-next {right: 0;}
+
+
 /********************** banner *********************/
 .banner-container {background-color: #e8eef3;}
 .banner-container .slide-stage {display: flex; justify-content: center;}
@@ -45,8 +58,6 @@ html, body {font-size: 16px; font-family: 'Noto Sans KR', sans-serif;}
 .banner-container .slide-stage .slide-wrap .slide {position: absolute;}
 
 
-/********************** main-wrapper *********************/
-.main-wraaper {background-color: gray; height: 400px;}
 
 
 /********************** editor-wrapper *********************/
