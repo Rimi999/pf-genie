@@ -44,6 +44,23 @@ html, body {font-size: 16px; font-family: 'Noto Sans KR', sans-serif;}
 .banner-container .slide-stage .slide-wrap {position: relative; }
 .banner-container .slide-stage .slide-wrap .slide {position: absolute;}
 
+
+/********************** main-wrapper *********************/
+.main-wraaper {background-color: gray; height: 400px;}
+
+
+/********************** editor-wrapper *********************/
+.editor-wrapper {background-color: gray; height: 400px;}
+
+
+/********************** tv-wrapper *********************/
+.tv-wrapper {background-color: gray; height: 400px;}
+
+
+/********************** footer *********************/
+
+
+
 /********************** 반응형 설정 *********************/
 @media (max-width: 1399px) {
 	.wrapper {width: calc(100% - 2rem);}
