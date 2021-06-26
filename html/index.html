@@ -14,6 +14,7 @@
 	<script src="../js/jquery-3.6.0.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/axios.min.js"></script>
+	<script src="../js/moment.min.js"></script>
 </head>
 
 <body>
@@ -186,10 +187,13 @@
 
 	<!-- main -->
 	<section class="main-wrapper">
-		<div class="main-wrap wrapper">
-			<div class="chart-wrapper">
+		<div class="main-wrap">
+			<div class="chart-wrapper wrapper">
 				<h2 class="title">실시간 차트</h2>
-				<h3 class="time">2021.06.25 20:00</h3>
+				<div class="chart-times">
+					<span class="date"></span>
+					<span class="time"></span>
+				</div>
 				<ul class="chart-wrap">
 					<li class="chart">
 						<h3 class="rank">1</h3>
