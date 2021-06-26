@@ -5,7 +5,6 @@ init()
 /*************** 사용자 함수 *****************/
 function init() {
 	navi()
-	slide()
 	times()
 }
 

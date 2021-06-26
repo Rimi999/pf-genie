@@ -58,15 +58,17 @@ h2.title {font-size: 1.25em;}
 
 
 /********************** main-wrapper *********************/
-.main-stage {padding: 3em 0; display: flex;}
+.chart-stage {padding: 3em 0; display: flex;}
 
-.main-stage .chart-wrapper {width: 150%; margin-right: 2em;}
-.chart-wrapper .titile-wrap {display: flex; justify-content: space-between; align-items: center;
-	padding: 1em; border-bottom: 1px solid #222;}
+.chart-stage .chart-wrapper {width: 150%; margin-right: 2em;}
+.chart-wrapper .titile-wrap {display: flex; justify-content: space-between;align-items: center;
+	padding: 1em;}
 .chart-wrapper .titile-wrap .times {color: #888; font-size: 0.875em; font-weight: 300;}
-.chart-wrapper .chart-wrap .chart {padding: 1em; display: flex; justify-content: space-around;
+.chart-wrapper .chart-wrap { border-top: 1px solid #222;}
+.chart-wrapper .chart-wrap .chart {padding: 0.75em; display: flex; justify-content: space-around;
 	align-items: center; border-bottom: 1px solid #eee;}
 .chart-wrapper .chart-wrap .chart:hover {background-color: #eee;}
+.chart-wrapper .chart-wrap div {text-align: center;}
 .chart-wrapper .chart-wrap div:nth-child(1) {width: 5%;}
 .chart-wrapper .chart-wrap div:nth-child(2) {width: 15%;}
 .chart-wrapper .chart-wrap div:nth-child(3) {width: 50%;}
