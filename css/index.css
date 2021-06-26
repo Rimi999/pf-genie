@@ -78,7 +78,14 @@ h2.title {font-size: 1.25em;}
 .main-stage .evt-wrapper {width: 100%;}
 
 /********************** editor-wrapper *********************/
-.editor-wrapper {background-color: gray; height: 400px;}
+.editor-wrapper .editor-wrap {display: flex; padding: 1em 0;}
+.editor-wrapper .editor-wrap .editor {border: 1px solid #eee; width: 25%; margin: 0 1em;
+	color: #666; font-weight: 300;}
+	.editor-wrapper .editor-wrap .editor:nth-child(1) {margin-left: 0;}
+	.editor-wrapper .editor-wrap .editor:nth-child(4) {margin-right: 0;}
+.editor-wrapper .editor .cnt {padding: 1em;}
+.editor-wrapper .editor .title {color: #111; font-weight: 500; padding: 1em 0 1.5em;}
+
 
 
 /********************** tv-wrapper *********************/
