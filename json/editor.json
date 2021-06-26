@@ -1,0 +1,21 @@
+{
+	"editor" : [
+		{"id": 1, "src" : "../img/editor01.jpg", "sub-title" : "추천신곡", "title" : "여름의 어느 날을 한 조각 담아낸 재즈 플레이리스트", "ex" : "DJ 수수"},
+		{"id": 2, "src" : "../img/editor02.jpg", "sub-title" : "추천 컬러", "title" : "감성과 텐션이 #48시간째 계속~ #파티 메리 골드", "ex" : "DJ 지니"},
+		{"id": 3, "src" : "../img/editor03.jpg", "sub-title" : "힙알사전", "title" : "'토끼춤을' 춘 뉴잭스윙 아이돌, 바비 브라운", "ex" : "알앨비 레전드"},
+		{"id": 4, "src" : "../img/editor04.jpg", "sub-title" : "스페셜", "title" : "Doja Cat의 행성으로 초대합니다, [Planet Her]" , "ex" : "앨범 발매 이벤트"},
+		{"id": 5, "src" : "../img/editor05.jpg", "sub-title" : "스페셜", "title" : "싱어송라이터 '유발이'의 프랑스 동요 [Mademe Coucou]" , "ex" : "앨범 발매 이벤트"},
+		{"id": 6, "src" : "../img/editor06.jpg", "sub-title" : "김김박김", "title" : "혼자 갖는 차(茶) 시간을 위하여", "ex" : "KIMKIMPARKKIM's 플레이리스트 가.."},
+		{"id": 7, "src" : "../img/editor07.jpg", "sub-title" : "클래식 공감", "title" : "내향적인 사람이 무대에 서는 이유", "ex" : "바이올리니스트 김봄 소리"},
+		{"id": 8, "src" : "../img/editor08.jpg", "sub-title" : "추천 선곡", "title" : "6월 넷째 주 빌보드 TOP 100 하이라이트!", "ex" : "DJ 지니"},
+		{"id": 9, "src" : "../img/editor09.jpg", "sub-title" : "경기 뮤직", "title" : "김성환 기자의 대한민국 로컬 뮤직 탐방", "ex" : "'대구광역시'편"},
+		{"id": 10, "src" : "../img/editor10.jpg", "sub-title" : "MM JAZZ", "title" : "솔로 악기로서 트럼본의 가능성 확대한 명연주자", "ex" : "재즈덩크"},
+		{"id": 11, "src" : "../img/editor11.jpg", "sub-title" : "추천 컬러", "title" : "센스있게~#느낌있게~#그루빙 메리골드", "ex" : "DJ 지니"},
+		{"id": 12, "src" : "../img/editor12.jpg", "sub-title" : "지니뮤직 X 프랑스대사관", "title" : "스텔라장이 추천하는 프랑스 음악 이야기, 그녀와의 인터뷰", "ex" : "지금 바로 만나보세요!"},
+		{"id": 13, "src" : "../img/editor13.jpg", "sub-title" : "스페셜", "title" : "순간의 영원을 담아, 김아현 [Every you, in Every moment]", "ex" : "앨범 발매 이벤트"},
+		{"id": 14, "src" : "../img/editor14.jpg", "sub-title" : "스페셜", "title" : "청량한 여름을 닮은 일본 차세대 밴드, MONO NO AWARE", "ex" : "4집 스토리"},
+		{"id": 15, "src" : "../img/editor15.jpg", "sub-title" : "가요 탐구 생활", "title" : "한여름 듣기 좋은 노래들의 잔치", "ex" : "가요탐구 생활 #31"},
+		{"id": 16, "src" : "../img/editor16.jpg", "sub-title" : "스페셜", "title" : "센스있게~#느낌있게~#그루빙 메리골드", "ex" : "DJ 지니"}
+	]
+}
+
