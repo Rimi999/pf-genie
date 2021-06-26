@@ -1,14 +1,15 @@
 {
-	"char" : [
-		{"id" : 1, "src" : "../img/index/", "sing": "치맛바람 (Chi Mat Ba Ram)", "singer": "브레이브걸스"},
-		{"id" : 2, "src" : "../img/index/", "sing": "Next Level", "singer": "aespa"},
-		{"id" : 3, "src" : "../img/index/", "sing": "Butter", "singer": "방탄소년단"},
-		{"id" : 4, "src" : "../img/index/", "sing": "비와 당신", "singer": "이무진"},
-		{"id" : 5, "src" : "../img/index/", "sing": "Alcohol-Free", "singer": "트와이스(TWICE)"},
-		{"id" : 6, "src" : "../img/index/", "sing": "헤픈 우연", "singer": "헤이즈 (Heize)"},
-		{"id" : 7, "src" : "../img/index/", "sing": "가을 우체국 앞에서", "singer": "김대영"},
-		{"id" : 8, "src" : "../img/index/", "sing": "Dun Dun Dance", "singer": "오마이걸"},
-		{"id" : 9, "src" : "../img/index/", "sing": "하루만 더", "singer": "빅마마"},
-		{"id" : 10, "src" : "../img/index/", "sing": "롤린 (Rollin')", "singer": "브레이브걸스"}
+	"chart" : [
+		{"id" : 1, "src" : "../img/album.jpg", "sing": "치맛바람 (Chi Mat Ba Ram)", "singer": "브레이브걸스"},
+		{"id" : 2, "src" : "../img/album2.jpg", "sing": "Next Level", "singer": "aespa"},
+		{"id" : 3, "src" : "../img/album3.jpg", "sing": "Butter", "singer": "방탄소년단"},
+		{"id" : 4, "src" : "../img/album4.jpg", "sing": "비와 당신", "singer": "이무진"},
+		{"id" : 5, "src" : "../img/album5.jpg", "sing": "Alcohol-Free", "singer": "트와이스(TWICE)"},
+		{"id" : 6, "src" : "../img/album6.jpg", "sing": "헤픈 우연", "singer": "헤이즈 (Heize)"},
+		{"id" : 7, "src" : "../img/album7.jpg", "sing": "가을 우체국 앞에서", "singer": "김대영"},
+		{"id" : 8, "src" : "../img/album8.jpg", "sing": "Dun Dun Dance", "singer": "오마이걸"},
+		{"id" : 9, "src" : "../img/album9.jpg", "sing": "하루만 더", "singer": "빅마마"},
+		{"id" : 10, "src" : "../img/album10.jpg", "sing": "롤린 (Rollin')", "singer": "브레이브걸스"}
 	]
 }
+
