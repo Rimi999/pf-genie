@@ -37,10 +37,11 @@ h2.title {font-size: 1.25em;}
 .navi-wrapper .sub-wrap .sub:hover {background-color: #eee;}
 
 
-/********************** main-wrapper *********************/
+/********************** recent-wrapper *********************/
 .recent-container .slide-stage {display: flex; justify-content: center;}
 .recent-container .slide-stage .slide-wrap {position: relative; }
-.recent-container .slide-stage .slide-wrap .slide {position: absolute;}
+.recent-container .slide-wrap .slide {position: absolute; min-height: 100%; 
+	min-width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 
 .bt-angle {font-size: 4em; position: absolute; top: 50%; transform: translateY(-50%);
 	cursor: pointer; color: #fff; opacity: .3; transition: all .5s; z-index: 2;}
@@ -49,17 +50,30 @@ h2.title {font-size: 1.25em;}
 .bt-angle.bt-next {right: 0;}
 
 
-/********************** banner *********************/
+/********************** banner-wrapper *********************/
 .banner-container {background-color: #e8eef3;}
 .banner-container .slide-stage {display: flex; justify-content: center; flex-wrap: wrap;}
 .banner-container .slide-stage .slide-wrap {position: relative; }
 .banner-container .slide-stage .slide-wrap .slide {position: absolute;}
 
 
-/********************** cart-wrapper *********************/
+/********************** main-wrapper *********************/
+.main-stage {padding: 3em 0; display: flex;}
+
+.main-stage .chart-wrapper {width: 150%; margin-right: 2em;}
+.chart-wrapper .titile-wrap {display: flex; justify-content: space-between; align-items: center;
+	padding: 1em; border-bottom: 1px solid #222;}
+.chart-wrapper .titile-wrap .times {color: #888; font-size: 0.875em; font-weight: 300;}
+.chart-wrapper .chart-wrap .chart {padding: 1em; display: flex; justify-content: space-around;
+	align-items: center; border-bottom: 1px solid #eee;}
+.chart-wrapper .chart-wrap .chart:hover {background-color: #eee;}
+.chart-wrapper .chart-wrap div:nth-child(1) {width: 5%;}
+.chart-wrapper .chart-wrap div:nth-child(2) {width: 15%;}
+.chart-wrapper .chart-wrap div:nth-child(3) {width: 50%;}
+.chart-wrapper .chart-wrap div:nth-child(4) {width: 30%;}
 
 
-
+.main-stage .evt-wrapper {width: 100%;}
 
 /********************** editor-wrapper *********************/
 .editor-wrapper {background-color: gray; height: 400px;}
@@ -100,7 +114,6 @@ h2.title {font-size: 1.25em;}
 
 
 /********************** player-wrapperr *********************/
-
 .player-wrapper {position: fixed; z-index: 100; width: 100%; left: 0; bottom: 0;
 	background: rgba(0, 0, 0, .7); backdrop-filter: blur(6px); padding: 1em 0; color: #fff;}
 .player-wrapper .player {display: flex; justify-content: center; align-items: center;}

@@ -5,6 +5,7 @@ init()
 /*************** 사용자 함수 *****************/
 function init() {
 	navi()
+	slide()
 	times()
 }
 
@@ -29,8 +30,9 @@ function navi() {
 	}
 }
 
+
 function times() {
-	var $chartTimes = $('.chart-wrapper .chart-times')
+	var $chartTimes = $('.chart-wrapper .times')
 	$chartTimes.find('.date').text(moment().format('YYYY. M. D.'))
 	$chartTimes.find('.time').text(moment().format('hh:mm'))
 }
