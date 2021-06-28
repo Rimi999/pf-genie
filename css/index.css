@@ -30,7 +30,8 @@ h2.title {font-size: 1.25em;}
 .navi-wrapper .navi-wrap .navi {padding: 1em; width: 170px;}
 .navi-wrapper .navi-wrap .navi:hover {color: #0096FF;}
 
-.navi-wrapper .sub-wrapper {width: 100%; height: 320px; position: absolute; display: flex;
+.navi-wrapper .sub-container {width: 100%; position: absolute; display: none;}
+.navi-wrapper .sub-wrapper {display: flex;
 	justify-content: center; background-color: #fff; border-top: 1px solid #ccc;}
 .navi-wrapper .sub-wrapper .sub-wrap {width: 170px; text-align: center; padding: 1em 0;}
 .navi-wrapper .sub-wrap .sub {padding: 0.5em; font-weight: 300;}
@@ -38,13 +39,15 @@ h2.title {font-size: 1.25em;}
 
 
 /********************** recent-wrapper *********************/
+.recent-wrapper {}
+.recent-wrapper .recent-container {}
 .recent-wrapper .slide-stage {overflow: hidden;}
-.recent-wrapper .slide-stage .slide-wrap {position: relative; }
-.recent-wrapper .slide-wrap .slide {position: absolute; min-height: 100%; 
-	min-width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.recent-wrapper .slide-stage .slide-wrap {position: relative; min-height: 50vh; overflow: hidden;}
+.recent-wrapper .slide-wrap .slide {position: absolute; height: 100%;  width: 100%; background-position: center; background-size: cover;}
+.recent-wrapper .slide-wrap .img-guide {position: relative; min-height: 50vh; margin: auto; display: block; min-width: 100%;}
 
 	.bt-angle {font-size: 6em; position: absolute; top: 50%; transform: translateY(-50%);
-	cursor: pointer; color: #fff; opacity: .3; transition: all .5s; z-index: 2;}
+	cursor: pointer; color: #fff; opacity: .3; transition: all .5s; z-index: 999;}
 .bt-angle:hover {opacity: 1;}
 .bt-angle.bt-prev {left: 0;}
 .bt-angle.bt-next {right: 0;}
@@ -91,9 +94,11 @@ h2.title {font-size: 1.25em;}
 /********************** tv-wrapper *********************/
 .tv-container {padding-bottom: 4em;}
 .tv-container .tv-wrapper .tv-wrap {display: flex; justify-content: space-between; flex: 1 1 0;}
-.tv-container .tv-wrap .tv {background-color: #eee; margin: 1em;}
+.tv-container .tv-wrap .tv {background-color: #eee; margin: 1em; width: 25%;}
 .tv-container .tv-wrap .tv:nth-child(1) {margin-left: 0em;}
 .tv-container .tv-wrap .tv:nth-child(4) {margin-right: 0em;}
+.tv-container .tv-wrap .youtb {width: 100%;}
+.tv-container .tv-wrap .youtb iframe {width: 100%;}
 .tv-container .tv-wrap .tv .cnt {padding: 1em; font-weight: 300; color: #666;}
 .tv-container .tv-wrap .tv .cnt .sub-title {display: inline-block; background-color: #0096FF;
 	border-radius: 2px; font-size: 0.75em; padding: 0.25em; color: #fff;}
