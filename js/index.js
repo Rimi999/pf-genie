@@ -6,7 +6,6 @@ init()
 function init() {
 	navi()
 	recentSlide()
-	banneSlide()
 	times()
 	chart()
 	editor()
