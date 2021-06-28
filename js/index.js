@@ -5,6 +5,7 @@ init()
 /*************** 사용자 함수 *****************/
 function init() {
 	navi()
+	recentSlide()
 	times()
 	chart()
 	editor()
@@ -28,6 +29,47 @@ function navi() {
 
 	function onNaviLeave() {
 		$('.sub-wrapper').stop().slideUp(300)
+	}
+}
+
+function recentSlide() {
+	var idx = 0
+	var zIdx = 2 
+	var lastIdx = $('.recent-wrapper .slide').length - 1
+	var interval
+	var intervalGap = 4000
+	init()
+
+	function init() {
+		$('.recent-wrapper .slide').eq(idx).css('z-index', zIdx++)
+		var interval = setInterval(onNextClick, intervalGap)
+	}
+
+
+	$('.recent-wrapper .bt-prev').on('click', onPrevClick)
+	$('.recent-wrapper .bt-next').on('click', onNextClick)
+	$('.recent-wrapper .slide-stage').on('mouseover', onOver)
+	$('.recent-wrapper .slide-stage').on('mouseleave', onLeave)
+
+
+	function onPrevClick(){
+		idx = (idx === 0) ? lastIdx : idx - 1
+		$('.recent-wrapper .slide').eq(idx).css('z-index', zIdx++)
+		.stop().fadeOut(0).fadeIn(500)
+	}
+
+	function onNextClick(){
+		idx = (idx === lastIdx) ? 0 : idx + 1
+		$('.recent-wrapper .slide').eq(idx).css('z-index', zIdx++)
+		.stop().fadeOut(0).fadeIn(500)
+	}
+
+	function onOver() {
+		clearInterval(interval)
+	}
+
+	function onLeave() {
+	interval = setInterval(onNextClick, intervalGap)
 	}
 }
 
@@ -62,11 +104,11 @@ function editor() {
 		r.chart.forEach(function (v, i) {
 			var html = '';
 			var html =	'<li class="editor">'
-			var html =	'<div><img src="../img/editor01.jpg" class="w-100"></div>'
+			var html =	'<div><img src="'+ v.src +'" class="w-100"></div>'
 			var html =	'<div class="cnt">'
-			var html =	'<div class="sub-title">추천 신곡</div>'
-			var html =	'<div class="title">여름의 어느 날을 한 조각 담아낸 재즈 플레이리스트</div>'
-			var html =	'<div class="ex">DJ 수수</div>'
+			var html =	'<div class="sub-title">'+ v.subTitle +'</div>'
+			var html =	'<div class="title">'+ v.title +'</div>'
+			var html =	'<div class="ex">'+ v.ex +'</div>'
 			var html =	'</div>'
 			var html =	'</li>'
 			$editortWrap.append(html);

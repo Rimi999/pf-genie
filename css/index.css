@@ -38,12 +38,12 @@ h2.title {font-size: 1.25em;}
 
 
 /********************** recent-wrapper *********************/
-.recent-container .slide-stage {display: flex; justify-content: center;}
-.recent-container .slide-stage .slide-wrap {position: relative; }
-.recent-container .slide-wrap .slide {position: absolute; min-height: 100%; 
+.recent-wrapper .slide-stage {overflow: hidden;}
+.recent-wrapper .slide-stage .slide-wrap {position: relative; }
+.recent-wrapper .slide-wrap .slide {position: absolute; min-height: 100%; 
 	min-width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 
-.bt-angle {font-size: 4em; position: absolute; top: 50%; transform: translateY(-50%);
+	.bt-angle {font-size: 6em; position: absolute; top: 50%; transform: translateY(-50%);
 	cursor: pointer; color: #fff; opacity: .3; transition: all .5s; z-index: 2;}
 .bt-angle:hover {opacity: 1;}
 .bt-angle.bt-prev {left: 0;}
