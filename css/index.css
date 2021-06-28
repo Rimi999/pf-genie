@@ -90,7 +90,7 @@ h2.title {font-size: 1.25em;}
 
 /********************** tv-wrapper *********************/
 .tv-container {padding-bottom: 4em;}
-.tv-container .tv-wrapper .tv-wrap {display: flex; justify-content: space-between;}
+.tv-container .tv-wrapper .tv-wrap {display: flex; justify-content: space-between; flex: 1 1 0;}
 .tv-container .tv-wrap .tv {background-color: #eee; margin: 1em;}
 .tv-container .tv-wrap .tv:nth-child(1) {margin-left: 0em;}
 .tv-container .tv-wrap .tv:nth-child(4) {margin-right: 0em;}
