@@ -6,6 +6,7 @@ init()
 function init() {
 	navi()
 	recentSlide()
+	banneSlide()
 	times()
 	chart()
 	editor()
@@ -71,6 +72,9 @@ function recentSlide() {
 	function onLeave() {
 	interval = setInterval(onNextClick, intervalGap)
 	}
+}
+
+function bannerSlide() {
 }
 
 function times() {
