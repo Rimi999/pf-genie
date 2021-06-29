@@ -71,8 +71,6 @@ function recentSlide() {
 	}
 }
 
-function bannerSlide() {
-}
 
 function times() {
 	var $chartTimes = $('.chart-wrapper .times')
@@ -99,11 +97,44 @@ function chart() {
 	$.get('../json/chart.json', onGetData);
 }
 
+
+function slideDream() {
+	var swiper = new Swiper('.editor-wrapper .swiper-container', {
+		pagination: {
+			el: '.editor-wrapper .pager-wrapper',
+			clickable: true
+		},
+		navigation: {
+			nextEl: '.editor-wrapper .bt-slide.right',
+			prevEl: '.editor-wrapper .bt-slide.left',
+		},
+		autoplay: {
+			delay: 3000,
+		},
+		loop: true,
+		slidesPerView: 1,
+		spaceBetween: 40,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			}
+		}
+	});
+
+	$('.editor-wrapper .slide-stage').hover(function(){
+		swiper.autoplay.stop()
+	}, function(){
+		swiper.autoplay.start()
+	})
+}
+
 function editor() {
 	var $editorWrap = $('.editor-wrapper .editor-wrap');
 	
 	function onGetData(r) {
-		console.log(r);
 		r.editor.forEach(function (v, i) {
 			var html = '';
 			html += '<li class="editor">';
