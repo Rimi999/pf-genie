@@ -6,6 +6,7 @@ init()
 function init() {
 	navi()
 	recentSlide()
+	
 	times()
 	chart()
 	editor()
@@ -97,6 +98,15 @@ function chart() {
 	$.get('../json/chart.json', onGetData);
 }
 
+function bannerSlide() {
+	var swiper = new Swiper(".bannerSwiper", {
+		spaceBetween: 30,
+		pagination: {
+			el: ".pager-wrap",
+			clickable: true,
+		},
+	});
+}
 
 function slideDream() {
 	var swiper = new Swiper('.editor-wrapper .swiper-container', {
