@@ -6,7 +6,6 @@ init()
 function init() {
 	navi()
 	recentSlide()
-	
 	times()
 	chart()
 	editor()
@@ -15,7 +14,6 @@ function init() {
 
 /*************** 이벤트 콜백 *****************/
 function navi() {
-	
 	$('.navi-wrapper .navi').on('click', onNaviClick)
 	$('.navi-wrapper .navi').on('mouseover', onNaviHover)
 	$('.navi-wrapper').on('mouseleave', onNaviLeave)
@@ -23,11 +21,9 @@ function navi() {
 	function onNaviClick() {
 		$('.sub-container').stop().slidToggle(300)
 	}
-	
 	function onNaviHover() {
 		$('.sub-container').stop().slideDown(300)
 	}
-	
 	function onNaviLeave() {
 		$('.sub-container').stop().slideUp(300)
 	}
