@@ -44,17 +44,17 @@ h2.title {font-size: 1.25em;}
 
 
 /********************** recent-wrapper *********************/
-.recent-wrapper .slide-stage {overflow: hidden;}
+.recent-wrapper .slide-stage {overflow: hidden; position: relative;}
 .recent-wrapper .slide-stage .slide-wrap {position: relative; min-height: 50vh; overflow: hidden;}
 .recent-wrapper .slide-wrap .slide {position: absolute; height: 100%;  width: 100%; background-position: center;
 	background-size: cover;}
 .recent-wrapper .slide-wrap .img-guide {position: relative; min-height: 50vh; margin: auto; display: block; min-width: 100%;}
 
-.bt-angle {font-size: 6em; position: absolute; top: 50%; transform: translateY(-50%);
+.recent-wrapper .bt-angle {font-size: 6em; position: absolute; top: 50%; transform: translateY(-50%);
 	cursor: pointer; color: #fff; opacity: .3; transition: all .5s; z-index: 999;}
-.bt-angle:hover {opacity: 1;}
-.bt-angle.bt-prev {left: 0;}
-.bt-angle.bt-next {right: 0;}
+.recent-wrapper .bt-angle:hover {opacity: 1;}
+.recent-wrapper .bt-angle.bt-prev {left: 0;}
+.recent-wrapper .bt-angle.bt-next {right: 0;}
 
 
 /********************** chart-wrapper *********************/

@@ -32,18 +32,16 @@ function recentSlide() {
 	var interval
 	var intervalGap = 4000
 	init()
-	
+
 	function init() {
 		$('.recent-wrapper .slide').eq(idx).css('z-index', zIdx++)
 		interval = setInterval(onNextClick, intervalGap)
 	}
 	
-	
 	$('.recent-wrapper .bt-prev').on('click', onPrevClick)
 	$('.recent-wrapper .bt-next').on('click', onNextClick)
 	$('.recent-wrapper .slide-stage').on('mouseover', onOver)
 	$('.recent-wrapper .slide-stage').on('mouseleave', onLeave)
-	
 	
 	function onPrevClick() {
 		idx = (idx === 0) ? lastIdx : idx - 1
@@ -116,7 +114,7 @@ function sildeEditor() {
 		},
 	});
 
-	var $slideWrapper = $('.editor-wrapper .swiper-wrapper')
+	var $slideWrapper = $('.editorMySwiper')
 	function onGetData(r) {
 		r.editor.forEach(function(v,i) {
 			var html = '';
