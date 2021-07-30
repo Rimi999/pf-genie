@@ -1,18 +1,14 @@
-/*************** 글로벌 설정 *****************/
-
 init()
 
-/*************** 사용자 함수 *****************/
 function init() {
 	navi()
 	recentSlide()
 	times()
 	chart()
-	editor()
+	sildeBanner()
+	sildeEditor()
 }
 
-
-/*************** 이벤트 콜백 *****************/
 function navi() {
 	$('.navi-wrapper .navi').on('click', onNaviClick)
 	$('.navi-wrapper .navi').on('mouseover', onNaviHover)
@@ -68,7 +64,6 @@ function recentSlide() {
 	}
 }
 
-
 function times() {
 	var $chartTimes = $('.chart-wrapper .times')
 	$chartTimes.find('.date').text(moment().format('YYYY. M. D.'))
@@ -94,66 +89,45 @@ function chart() {
 	$.get('../json/chart.json', onGetData);
 }
 
-function bannerSlide() {
-	var swiper = new Swiper(".bannerSwiper", {
+function sildeBanner() {
+	var swiper = new Swiper(".bannerMySwiper", {
 		spaceBetween: 30,
 		pagination: {
-			el: ".pager-wrap",
+			el: ".banner-swiper-pagination",
 			clickable: true,
 		},
 	});
 }
 
-function slideDream() {
-	var swiper = new Swiper('.editor-wrapper .swiper-container', {
+function sildeEditor() {
+	var swiper = new Swiper(".mySwiper3", {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		slidesPerGroup: 4,
+		loop: true,
+		loopFillGroupWithBlank: true,
 		pagination: {
-			el: '.editor-wrapper .pager-wrapper',
-			clickable: true
+			el: ".swiper-pagination",
+			clickable: true,
 		},
 		navigation: {
-			nextEl: '.editor-wrapper .bt-slide.right',
-			prevEl: '.editor-wrapper .bt-slide.left',
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
 		},
-		autoplay: {
-			delay: 3000,
-		},
-		loop: true,
-		slidesPerView: 1,
-		spaceBetween: 40,
-		breakpoints: {
-			576: {
-				slidesPerView: 2,
-			},
-			992: {
-				slidesPerView: 3,
-			}
-		}
 	});
 
-	$('.editor-wrapper .slide-stage').hover(function(){
-		swiper.autoplay.stop()
-	}, function(){
-		swiper.autoplay.start()
-	})
-}
-
-function editor() {
-	var $editorWrap = $('.editor-wrapper .editor-wrap');
-	
+	var $slideWrapper = $('.editor-wrapper .swiper-wrapper')
 	function onGetData(r) {
-		r.editor.forEach(function (v, i) {
+		r.editor.forEach(function(v,i) {
 			var html = '';
-			html += '<li class="editor">';
-			html += '<div><img src="' + v.src + '" class="w-100"></div>';
+			html += '<div><img src="'+v.src+'" class="w-100"></div>';
 			html += '<div class="cnt">';
-			html += '<div class="sub-title">' + v.subTitle + '</div>';
-			html += '<div class="title">' + v.title + '</div>';
-			html += '<div class="ex">' + v.ex + '</div>';
+			html += '<div class="sub-title">'+v.subTitle+'</div>';
+			html += '<div class="title">'+v.title+'</div>';
+			html += '<div class="ex">'+v.ex+'</div>';
 			html += '</div>';
-			html += '</li>';
-			$editorWrap.append(html);
+			$slideWrapper.append(html)
 		})
 	}
-	
-	$.get('../json/editor.json', onGetData);
+	$.get('../json/editor.json', onGetData)
 }

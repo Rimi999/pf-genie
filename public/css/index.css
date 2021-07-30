@@ -2,8 +2,9 @@
 
 
 /********************** 글로벌 설정 *********************/
-html, body {font-size: 16px; font-family: 'Noto Sans KR', sans-serif;}
-.wrapper {width: 1368px; margin: auto;}
+html, body {font-size: 16px; font-family: 'Noto Sans KR', sans-serif;  position: relative;}
+.wrapper {width: 1368px; margin: 0 auto;}
+.wrapper2 {width: 1168px; margin: 0 auto;}
 
 h2.title {font-size: 1.25em;}
 .bt-more { padding: 0.75em 3em; border: 2px solid #0096FF; color: #0096FF; display:block; margin:auto}
@@ -74,22 +75,13 @@ h2.title {font-size: 1.25em;}
 
 
 /********************** banner-wrapper *********************/
-.banner-container {background-color: #e8eef3; margin: 3em 0;}
-.banner-container .slide-stage {display: flex; justify-content: center; position: relative; 
-	overflow: hidden;}
-.banner-container .slide-wrap {position: relative;}
-.banner-container .slide-wrap > .slide {position: absolute;}
-
-.pager-wrap {position: absolute; z-index: 2; left: 50%; bottom: 3px; transform: translateX(-50px)}
-.pager-wrap > .pager {margin: .25em; cursor: pointer; color: #bbb;}
-.pager-wrap > .pager.active {color: #fff;}
+.banner-container {background-color: #e8eef3; margin: 3em 0; display: flex; justify-content: center; align-items: center;}
+.banner-container .swiper-container {width: 50%;	height: 100%; margin: 0;}
+.banner-container .banner-swiper-pagination {display: flex; justify-content: center; padding-bottom: 0.5em;}
 
 /********************** editor-wrapper *********************/
-.editor-container {padding: 3em 0;}
-.editor-container .editor-wrapper {padding: 3em 0;}
-.editor-wrapper .editor-wrap {display: flex;}
-.editor-wrapper .editor-wrap .editor {border: 1px solid #ccc; width: 25%; margin: 0 1em;
-	color: #666; font-weight: 300;}
+.editor-wrapper {padding: 3em 0;}
+.editor-wrapper .editor {border: 1px solid #ccc; width: 25%; margin: 0 1em;	color: #666; font-weight: 300;}
 .editor-wrapper .editor .cnt {padding: 1em;}
 .editor-wrapper .editor .title {color: #111; font-weight: 500; padding: 1em 0 2em;}
 
@@ -120,6 +112,7 @@ h2.title {font-size: 1.25em;}
 .menu-wrapper .menu-wrap .menu li:nth-child(1) {padding-left: 0;}
 .menu-wrapper .menu-wrap .menu li:last-child {font-weight: 500;}
 .menu-wrapper .menu-wrap .sns {color: #bbb; font-size: 1.325em;}
+.menu-wrapper .menu-wrap .sns i:hover{color: #555; cursor: pointer;}
 .menu-wrapper .menu-wrap .sns i:nth-child(1){margin-right: .5em;}
 
 .footer-wrapper {color: #777; padding-bottom: 2em;}
