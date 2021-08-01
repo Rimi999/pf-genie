@@ -23,7 +23,7 @@
 	<header class="header-wrapper">
 		<div class="top-wrapper wrapper">
 			<div class="top-wrap ">
-				<h2 class="notice-bullet">공지사항</h2>
+				<h2 class="notice-bullet">공지<span>사항</span></h2>
 				<h3 class="notice-title">정보수정 제안 EVENT 당첨자 발표</h3>
 				<i class="bi bi-chevron-right"></i>
 			</div>
@@ -33,16 +33,20 @@
 				<i class="fa fa-mobile"></i>
 			</div>
 		</div>
-		<div class="search-wrapper ">
+		<div class="search-wrapper">
 			<div class="search-wrap wrapper">
 				<h1 class="logo">
-					<a href="#"><img src="../img/logo_genie_5.0.png" alt="logo" class="w-100"></a>
+					<a href="#"><img src="../img/logo_genie_5.0.png" alt="logo" class="w-100 logo"></a>
+					<a href="#"><img src="../img/m-logo.png" alt="logo" class="m-logo"></a>
 				</h1>
 				<div class="search">
-					<input type="text" placeholder="시원하고 청량 아이돌 노래!">
+					<input type="text" placeholder="시원하고 청량한 아이돌 노래!">
 					<button><i class="bi bi-search"></i></button>
 				</div>
-				<i class="bi bi-person"></i>
+				<div class="icon-wrap">
+					<i class="bi bi-person"></i>
+					<i class="fa fa-bars"></i>
+				</div>
 			</div>
 		</div>
 		<div class="navi-wrapper">
@@ -112,6 +116,76 @@
 				</ul>
 			</div>
 		</div>
+		<div class="m-navi-wrapper">
+			<ul class="m-navi-wrap">
+				<li class="m-navi"><a href="#">지니차트</a>
+					<ul class="m-sub-wrap">
+						<li class="sub"><a href="#">TOP 200</a></li>
+						<li class="sub"><a href="#">장르별 차트</a></li>
+						<li class="sub"><a href="#">시대별 차트</a></li>
+						<li class="sub"><a href="#">뮤직비디오 차트</a></li>
+					</ul>
+				</li>
+				<li class="m-navi"><a href="#">최신음악</a>
+					<ul class="m-sub-wrap">
+						<li class="sub"><a href="#">최신곡</a></li>
+						<li class="sub"><a href="#">최신앨범</a></li>
+					</ul>
+				</li>
+				<li class="m-navi"><a href="#">장르음악</a>
+					<ul class="m-sub-wrap">
+						<li class="sub"><a href="#">가요</a></li>
+						<li class="sub"><a href="#">POP</a></li>
+						<li class="sub"><a href="#">OST</a></li>
+						<li class="sub"><a href="#">트로트</a></li>
+						<li class="sub"><a href="#">EDM</a></li>
+						<li class="sub"><a href="#">JAZZ</a></li>
+						<li class="sub"><a href="#">CLASSIC</a></li>
+						<li class="sub"><a href="#">JPOP</a></li>
+						<li class="sub"><a href="#">CCM</a></li>
+					</ul>
+				</li>
+				<li class="m-navi"><a href="#">지니TV</a>
+					<ul class="m-sub-wrap">
+						<li class="sub"><a href="#">홈</a></li>
+						<li class="sub"><a href="#">Ment 방송</a></li>
+						<li class="sub"><a href="#">뮤직 비디오</a></li>
+						<li class="sub"><a href="#">뮤지션</a></li>
+						<li class="sub"><a href="#">이색영상</a></li>
+					</ul>
+				</li>
+				<li class="m-navi"><a href="#">추천</a>
+					<ul class="m-sub-wrap">
+					<li class="sub"><a href="#">추천</a></li>
+					<li class="sub"><a href="#">인기</a></li>
+					<li class="sub"><a href="#">태그</a></li>
+					<li class="sub"><a href="#">히스토리</a></li>
+					</ul>
+				</li>
+				<li class="m-navi"><a href="#">매거진</a>
+					<ul class="m-sub-wrap">
+						<li class="sub"><a href="#">클래식 공감</a></li>
+						<li class="sub"><a href="#">스페셜</a></li>
+						<li class="sub"><a href="#">지니뮤직 챌린지</a></li>
+						<li class="sub"><a href="#">방송</a></li>
+						<li class="sub"><a href="#">뮤직리포트</a></li>
+						<li class="sub"><a href="#">이주의 앨범</a></li>
+					</ul>
+				</li>
+				<li class="m-navi"><a href="#">이용권</a>
+					<ul class="m-sub-wrap">
+						<li class="sub"><a href="#">지니 BEST</a></li>
+						<li class="sub"><a href="#">3개월 할인 특가</a></li>
+						<li class="sub"><a href="#">kt통신사 혜택</a></li>
+						<li class="sub"><a href="#">LGU+ 통신사 혜택</a></li>
+						<li class="sub"><a href="#">30일권</a></li>
+						<li class="sub"><a href="#">스페셜 이용권</a></li>
+						<li class="sub"><a href="#">상품권 등록</a></li>
+						<li class="sub"><a href="#">캐시 충전</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
 	</header>
 
 	<!-- recent-wrapper -->
@@ -134,7 +208,7 @@
 
 	<!-- chart-wrapper -->
 	<section class="chart-container wrapper2">
-		<div class="chart-stage ">
+		<div class="chart-stage">
 			<div class="chart-wrapper">
 				<div class="titile-wrap">
 					<h2 class="title">실시간 차트</h2>
@@ -152,7 +226,7 @@
 				<ul class="chart-wrap"></ul>
 			</div>
 		</div>
-		<button class="bt-more">더보기</button>
+		<div class="bt-more"><a href="#">더보기</a></div>
 	</section>
 
 	<!-- banner-wrapper -->
@@ -201,51 +275,10 @@
 
 	<!-- editor-wrapper -->
 	<section class="editor-wrapper">
-		<div class="editor-wrap wrapper2">
+		<div class="wrapper2">
+			<h2 class="title">에디터 추천</h2>
 			<div class="swiper-container editorMySwiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide editor">
-					</div>
-					<div class="swiper-slide editor">
-						<div><img src="../img/editor01.jpg" class="w-100"></div>
-						<div class="cnt">
-							<div class="sub-title">추천신곡</div>
-							<div class="title">여름의 어느 날을 한 조각 담아낸 재즈 플레이리스트</div>
-							<div class="ex">DJ 수수</div>
-						</div>
-					</div>
-					<div class="swiper-slide editor">
-						<div><img src="../img/editor01.jpg" class="w-100"></div>
-						<div class="cnt">
-							<div class="sub-title">추천신곡</div>
-							<div class="title">여름의 어느 날을 한 조각 담아낸 재즈 플레이리스트</div>
-							<div class="ex">DJ 수수</div>
-						</div>
-					</div>
-					<div class="swiper-slide editor">
-						<div><img src="../img/editor01.jpg" class="w-100"></div>
-						<div class="cnt">
-							<div class="sub-title">추천신곡</div>
-							<div class="title">여름의 어느 날을 한 조각 담아낸 재즈 플레이리스트</div>
-							<div class="ex">DJ 수수</div>
-						</div>
-					</div>
-					<div class="swiper-slide editor">
-						<div><img src="../img/editor01.jpg" class="w-100"></div>
-						<div class="cnt">
-							<div class="sub-title">추천신곡</div>
-							<div class="title">여름의 어느 날을 한 조각 담아낸 재즈 플레이리스트</div>
-							<div class="ex">DJ 수수</div>
-						</div>
-					</div>
-					<div class="swiper-slide editor">
-						<div><img src="../img/editor01.jpg" class="w-100"></div>
-						<div class="cnt">
-							<div class="sub-title">추천신곡</div>
-							<div class="title">여름의 어느 날을 한 조각 담아낸 재즈 플레이리스트</div>
-							<div class="ex">DJ 수수</div>
-						</div>
-					</div>
 				</div>
 				<div class="swiper-btn swiper-button-next"></div>
 				<div class="swiper-btn swiper-button-prev"></div>
@@ -293,7 +326,7 @@
 					</li>
 				</ul>
 			</div>
-			<button class="bt-more">더보기</button>
+			<div class="bt-more"><a href="#">더보기</a></div>
 		</div>
 
 		</div>

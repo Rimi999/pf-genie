@@ -6,22 +6,34 @@ function init() {
 	times()
 	chart()
 	sildeBanner()
+	editor()
 	sildeEditor()
 }
 
 function navi() {
+	$('.sub-container').slideUp(0)
 	$('.navi-wrapper .navi').on('click', onNaviClick)
 	$('.navi-wrapper .navi').on('mouseover', onNaviHover)
 	$('.navi-wrapper').on('mouseleave', onNaviLeave)
-	
 	function onNaviClick() {
-		$('.sub-container').stop().slidToggle(300)
+		$('.sub-container').stop().slideToggle(300)
 	}
 	function onNaviHover() {
 		$('.sub-container').stop().slideDown(300)
 	}
 	function onNaviLeave() {
 		$('.sub-container').stop().slideUp(300)
+	}
+	/*** 모바일 ***/ 
+	$('.m-navi-wrapper').slideUp(0)
+	$('.m-sub-wrap').slideUp(0)
+	$('.header-wrapper .fa-bars').on('click', openMoNavi)
+	$('.m-navi-wrapper .m-navi').on('click', openMoSubnavi)
+	function openMoNavi() {
+		$('.m-navi-wrapper').stop().slideToggle(300)
+	}
+	function openMoSubnavi() {
+		this.find('.m-sub-wrap').stop().slideToggle(300)
 	}
 }
 
@@ -70,7 +82,6 @@ function times() {
 
 function chart() {
 	var $chartWrap = $('.chart-wrapper .chart-wrap');
-	
 	function onGetData(r) {
 		r.chart.forEach(function (v, i) {
 			var html = '';
@@ -83,13 +94,14 @@ function chart() {
 			$chartWrap.append(html);
 		})
 	}
-	
 	$.get('../json/chart.json', onGetData);
 }
 
 function sildeBanner() {
 	var swiper = new Swiper(".bannerMySwiper", {
 		spaceBetween: 30,
+		loop: true,
+		autoplay: { delay: 2000 },
 		pagination: {
 			el: ".banner-swiper-pagination",
 			clickable: true,
@@ -97,10 +109,28 @@ function sildeBanner() {
 	});
 }
 
+function editor() {
+	var $slideWrapper = $('.editor-wrapper .swiper-wrapper')
+	function onGetData(r) {
+		r.editor.forEach(function(v, i) {
+			var html = '';
+			var html = '<div class="swiper-slide editor">';
+			var html = '<div><img src=" '+v.src+' " class="w-100"></div>';
+			var html = '<div class="cnt">';
+			var html = '<div class="sub-title">'+v.subTitle+'</div>';
+			var html = '<div class="title">'+v.title+'</div>';
+			var html = '<div class="ex">'+v.ex+'</div>';
+			var html = '</div>';
+			var html = '</div>';
+			$slideWrapper.append(html)
+		})
+	}
+	$.get('../json/editor.json', onGetData)
+}
 function sildeEditor() {
-	var swiper = new Swiper(".mySwiper3", {
+	var swiper = new Swiper(".editorMySwiper", {
 		slidesPerView: 4,
-		spaceBetween: 30,
+		spaceBetween: 15,
 		slidesPerGroup: 4,
 		loop: true,
 		loopFillGroupWithBlank: true,
@@ -113,19 +143,4 @@ function sildeEditor() {
 			prevEl: ".swiper-button-prev",
 		},
 	});
-
-	var $slideWrapper = $('.editorMySwiper')
-	function onGetData(r) {
-		r.editor.forEach(function(v,i) {
-			var html = '';
-			html += '<div><img src="'+v.src+'" class="w-100"></div>';
-			html += '<div class="cnt">';
-			html += '<div class="sub-title">'+v.subTitle+'</div>';
-			html += '<div class="title">'+v.title+'</div>';
-			html += '<div class="ex">'+v.ex+'</div>';
-			html += '</div>';
-			$slideWrapper.append(html)
-		})
-	}
-	$.get('../json/editor.json', onGetData)
 }
