@@ -11,10 +11,14 @@ function init() {
 }
 
 function navi() {
+	$('.top-wrapper .close').on('click', close)
 	$('.sub-container').slideUp(0)
 	$('.navi-wrapper .navi').on('click', onNaviClick)
 	$('.navi-wrapper .navi').on('mouseover', onNaviHover)
 	$('.navi-wrapper').on('mouseleave', onNaviLeave)
+	function close() {
+		$('.top-wrapper').css('display','none')
+	}
 	function onNaviClick() {
 		$('.sub-container').stop().slideToggle(300)
 	}

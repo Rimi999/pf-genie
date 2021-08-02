@@ -16,8 +16,10 @@ h2.title {font-size: 1.25em;}
 .header-wrapper {position: relative; z-index: 99;}
 .header-wrapper .icon-wrap {display: flex;}
 .header-wrapper .icon-wrap .fa-bars {margin-left: .5em; display: none;}
-.top-wrapper {display: flex; justify-content: space-between; padding: 1em 0;}
-.top-wrapper .top-wrap {display: flex; align-items: center; cursor: pointer;}
+.header-wrapper .top-wrapper {background-color: #ecf8ff;}
+.top-wrapper .top-wrap {display: flex; justify-content: space-between; padding: 1em 0;}
+.top-wrapper .top-wrap .close:hover {background-color:#fff;}
+.top-wrapper .top-wrap .notice-wrap {display: flex;}
 .top-wrapper .top-wrap .notice-bullet {color: #0096FF; margin-right: 0.5em;}
 .top-wrapper .top-wrap .notice-title {font-weight: 300;}
 .top-wrapper .top-wrap .notice-title:hover {text-decoration: underline;}
@@ -169,16 +171,13 @@ h2.title {font-size: 1.25em;}
 }
 
 @media (max-width: 991px) {
+	.header-wrapper {width: 100%;}
 	.header-wrapper .icon-wrap {font-size: 0.75em;}
-	.header-wrapper .top-wrap .notice-bullet span {display: none;}
-	.header-wrapper .top-wrap .notice-bullet span {display: none;}
-	.header-wrapper .search-wrap {width: 100%;}
-	.header-wrapper .player-wrap {display: none;}
 	.navi-wrapper .navi-wrap .navi > a,
 	.navi-wrapper .sub-wrapper .sub-wrap {width: 110px;}
-	.header-wrapper .m-navi-wrapper {display: block;}
-	.banner-container {width: 100%;}
-	.banner-container .swiper-container .swiper-slide {width: 100%;}
+	.chart-container .chart-wrapper.week {display: none;}
+	.banner-container {margin: 0;}
+	.banner-container .swiper-container {width: 85%;}
 	
 }
 
@@ -187,15 +186,16 @@ h2.title {font-size: 1.25em;}
 }
 
 @media (max-width: 575px) {
+	.header-wrapper .top-wrap .notice-title {font-size: 0.75em;}
+	.header-wrapper .top-wrap .notice-bullet span {display: none;}
+	.header-wrapper .search-wrapper .logo-wrap .logo {display: none;}
+	.header-wrapper .search-wrapper .logo-wrap .m-logo {display: block;}
+	.header-wrapper .navi-wrap {display: none;}
 	.chart-container .chart-wrap {width: 100vw; font-size: 0.75em;}
-
 	.banner-container .slide-wrapper-right {display: none;}
-	.banner-container .swiper-container {width: 100%; height: 100%;}
-	.banner-container .swiper-wrapper img {width: 110%; align-items: center;}
-
+	.banner-container .swiper-container {width: 100%;}
 	.tv-container .tv-wrapper .tv-wrap .tv {width: 75%; margin: 0 auto;}
 	.tv-container .tv-wrapper .tv-wrap .tv:not(:first-child) {display: none;}
-
 	.footer-wrapper .menu-wrap .menu li:not(:last-child) {display: none;}
 	.footer-wrapper .footer-wrap .info-company {display: block;}
 	.footer-wrapper .footer-wrap .info-company .info-cnt {padding: 1em 0;}
