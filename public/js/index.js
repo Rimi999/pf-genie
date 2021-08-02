@@ -29,15 +29,18 @@ function navi() {
 		$('.sub-container').stop().slideUp(300)
 	}
 	/*** 모바일 ***/ 
-	$('.m-navi-wrap').slideUp(0)
 	$('.m-sub-wrap').slideUp(0)
 	$('.header-wrapper .fa-bars').on('click', openMoNavi)
 	$('.m-navi-wrapper .m-navi').on('click', openMoSubnavi)
+	$('.m-sub-wrap').on('click', closeMoSubnavi)
 	function openMoNavi() {
 		$('.m-navi-wrapper').stop().slideToggle(300)
 	}
 	function openMoSubnavi() {
-		this.find('.m-sub-wrap').stop().slideToggle(300)
+		$(this).find('.m-sub-wrap').stop().slideToggle(300)
+	}
+	function closeMoSubnavi() {
+		$('.m-navi-wrapper').stop().slideUp(300)
 	}
 }
 

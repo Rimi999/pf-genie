@@ -49,8 +49,10 @@ h2.title {font-size: 1.25em;}
 
 .m-navi-wrapper {background-color: #fff; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5); width: 100%;
 	position: absolute; display: none; z-index: 999;}
-.m-navi-wrapper .m-navi-wrap .m-navi > a {padding: 1em; color:#0096FF; width: 100%; 
-	border-bottom: 1px solid #ccc;}
+.m-navi-wrapper .m-navi-wrap .m-navi > a {padding: 1em; color:#0096FF; width: 100%; background-color: #fff;
+border-bottom: 1px solid #ccc; display: flex; justify-content: space-between;}
+.m-navi-wrapper .m-navi-wrap .m-navi i {color: #555;}
+.m-navi-wrapper .m-navi-wrap .m-navi.active i {transition: t;}
 .m-navi-wrapper .m-navi-wrap .m-sub-wrap .sub {padding: 1em; font-weight: 300; background-color: #eee;
 	border-bottom: 1px solid #ddd;}
 
@@ -118,7 +120,7 @@ h2.title {font-size: 1.25em;}
 .footer-wrapper {color: #777; font-weight: 300;}
 .footer-wrapper .menu-wrapper {border-top: 1px solid #eee; border-bottom: 1px solid #444}
 .footer-wrapper .menu-wrapper .menu-wrap { display: flex; justify-content: space-between; align-items: center;}
-.footer-wrapper .menu-wrap .menu {display: flex;}
+.footer-wrapper .menu-wrap .menu {display: flex; padding: 0}
 .footer-wrapper .menu-wrap .menu li {padding: 0.7em .5em;}
 .footer-wrapper .menu-wrap .menu li:hover {text-decoration: underline; cursor: pointer;}
 .footer-wrapper .menu-wrap .menu li:nth-child(1) {padding-left: 0;}
