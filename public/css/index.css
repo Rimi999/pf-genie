@@ -31,7 +31,7 @@ h2.title {font-size: 1.25em;}
 .search-wrapper {padding: 1em 0;}
 .search-wrapper .search-wrap {display: flex; justify-content: center; align-items: center;}
 .search-wrapper .search-wrap .logo {width: 120px;}
-.search-wrapper .search-wrap .m-logo {width: 22px; display: none;}
+.search-wrapper .search-wrap .m-logo {width: 16px; display: none;}
 .search-wrapper .search-wrap .search {display: flex; justify-content: space-between; align-items: center;
 	width: 500px; padding: 0.25em 0; margin: 0 2em; border-bottom: 2px solid #0096FF;}
 .search-wrapper .search-wrap .search i {color: #0096FF; font-size: 1.25em;}
@@ -72,10 +72,11 @@ h2.title {font-size: 1.25em;}
 /********************** chart-wrapper *********************/
 .chart-container {padding: 3em 0;}
 .chart-container .chart-stage {display: flex;}
-.chart-container .chart-stage .chart-wrapper {width: 150%; margin-right: 2em;}
-.chart-container .chart-wrapper .titile-wrap {display: flex; justify-content: space-between;align-items: center; padding: 1em;}
-.chart-container .chart-wrapper .titile-wrap .times {color: #888; font-size: 0.875em; font-weight: 300;}
-.chart-container .chart-wrapper .chart-wrap { border-top: 1px solid #222; width: 100%;}
+.chart-container .chart-stage .chart-wrapper {width: 150%;}
+.chart-container .chart-wrapper.week {margin-left: 2em;}
+.chart-container .chart-wrapper .title-wrap {display: flex; justify-content: space-between; align-items: center; padding: 0.75em 0;  border-bottom: 1px solid #222;}
+.chart-container .chart-wrapper .title-wrap .times {color: #888; font-size: 0.875em; font-weight: 300;}
+.chart-container .chart-wrapper .chart-wrap {width: 100%;}
 .chart-container .chart-wrapper .chart-wrap .chart {padding: 0.75em; display: flex; justify-content: space-around;align-items: center; border-bottom: 1px solid #eee;}
 .chart-container .chart-wrap .chart:hover {background-color: #eee;}
 .chart-container .chart-wrap div {text-align: center;}
@@ -186,14 +187,17 @@ h2.title {font-size: 1.25em;}
 }
 
 @media (max-width: 575px) {
-	.header-wrapper .top-wrap .notice-title {font-size: 0.75em;}
 	.header-wrapper .top-wrap .notice-bullet span {display: none;}
+	.header-wrapper .search-wrapper {width: 100%;}
 	.header-wrapper .search-wrapper .logo-wrap .logo {display: none;}
 	.header-wrapper .search-wrapper .logo-wrap .m-logo {display: block;}
-	.header-wrapper .navi-wrap {display: none;}
-	.chart-container .chart-wrap {width: 100vw; font-size: 0.75em;}
+	.header-wrapper .search-wrapper .icon-wrap .fa-bars {display: block;}
+	.header-wrapper .search-wrapper .search {width: 70%; margin: 0 0.5em;}
+	.header-wrapper .navi-wrapper {display: none;}
+	.chart-container .chart-wrapper .chart-wrap .title-wrap { font-size: 0.75em;}
 	.banner-container .slide-wrapper-right {display: none;}
 	.banner-container .swiper-container {width: 100%;}
+	.banner-container .swiper-container .swiper-slide img {width: 110%;}
 	.tv-container .tv-wrapper .tv-wrap .tv {width: 75%; margin: 0 auto;}
 	.tv-container .tv-wrapper .tv-wrap .tv:not(:first-child) {display: none;}
 	.footer-wrapper .menu-wrap .menu li:not(:last-child) {display: none;}
