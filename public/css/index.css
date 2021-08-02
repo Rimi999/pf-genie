@@ -26,7 +26,7 @@ h2.title {font-size: 1.25em;}
 .top-wrapper .player-wrap .fa:nth-child(1) {color: #0096FF;}
 .top-wrapper .player-wrap .fa:nth-child(2) {margin: 0 0.25em;}
 
-.search-wrapper {padding: 1em 0; border-bottom: 1px solid #ccc;}
+.search-wrapper {padding: 1em 0;}
 .search-wrapper .search-wrap {display: flex; justify-content: center; align-items: center;}
 .search-wrapper .search-wrap .logo {width: 120px;}
 .search-wrapper .search-wrap .m-logo {width: 22px; display: none;}
@@ -35,7 +35,7 @@ h2.title {font-size: 1.25em;}
 .search-wrapper .search-wrap .search i {color: #0096FF; font-size: 1.25em;}
 .search-wrapper .search-wrap i {color: #0096FF; font-size: 2em; cursor: pointer;}
 
-.navi-wrapper {position: relative; border-bottom: 1px solid #ccc; z-index: 999;}
+.navi-wrapper {position: relative; border-top: 1px solid #ccc; z-index: 999; width: 100%;}
 .navi-wrapper .navi-wrap {display: flex; justify-content: center; text-align: center;}
 .navi-wrapper .navi-wrap .navi > a {padding: 1em; width: 170px;}
 .navi-wrapper .navi-wrap .navi:hover {color: #0096FF;}
@@ -68,12 +68,12 @@ h2.title {font-size: 1.25em;}
 
 
 /********************** chart-wrapper *********************/
-.chart-container {padding: 0;}
-.chart-container .chart-stage {padding: 3em 0; display: flex;}
+.chart-container {padding: 3em 0;}
+.chart-container .chart-stage {display: flex;}
 .chart-container .chart-stage .chart-wrapper {width: 150%; margin-right: 2em;}
 .chart-container .chart-wrapper .titile-wrap {display: flex; justify-content: space-between;align-items: center; padding: 1em;}
 .chart-container .chart-wrapper .titile-wrap .times {color: #888; font-size: 0.875em; font-weight: 300;}
-.chart-container .chart-wrapper .chart-wrap { border-top: 1px solid #222;}
+.chart-container .chart-wrapper .chart-wrap { border-top: 1px solid #222; width: 100%;}
 .chart-container .chart-wrapper .chart-wrap .chart {padding: 0.75em; display: flex; justify-content: space-around;align-items: center; border-bottom: 1px solid #eee;}
 .chart-container .chart-wrap .chart:hover {background-color: #eee;}
 .chart-container .chart-wrap div {text-align: center;}
@@ -84,7 +84,7 @@ h2.title {font-size: 1.25em;}
 
 
 /********************** banner-wrapper *********************/
-.banner-container {background-color: #e8eef3; margin: 3em 0; display: flex; justify-content: center; align-items: center;}
+.banner-container {background-color: #e8eef3; display: flex; justify-content: center; align-items: center;}
 .banner-container .swiper-container {width: 35%; margin: 0;}
 .banner-container .banner-swiper-pagination {display: flex; justify-content: center; padding: 0.5em 0;}
 
@@ -95,15 +95,16 @@ h2.title {font-size: 1.25em;}
 .editor-wrapper .swiper-container .editor {border: 1px solid #ccc; width: 25%; margin: 0 1em;	color: #666; font-weight: 300;}
 .editor-wrapper .swiper-container .editor .cnt {padding: 1em;}
 .editor-wrapper .swiper-container .editor .title {color: #111; font-weight: 500; padding: 1em 0 2em;}
+.editor-wrapper .swiper-btn {margin: 0; padding: 0;}
 
 
 /********************** tv-wrapper *********************/
-.tv-container {padding-top: 3em;}
+.tv-container {background-color: #e8eef3; padding: 3em 0;}
 .tv-container .tv-wrapper .tv-wrap {display: flex; justify-content: space-between; padding: 1em 0;}
-.tv-container .tv-wrap .tv {background-color: #eee; margin: 1%; width: 25%;}
+.tv-container .tv-wrap .tv {background-color: #fff; margin: 1%; width: 25%;}
 .tv-container .tv-wrap .tv:nth-child(1) {margin-left: 0em;}
 .tv-container .tv-wrap .tv:nth-child(4) {margin-right: 0em;}
-.tv-container .tv-wrap .youtb {width: 100%;}
+.tv-container .tv-wrap .youtb,
 .tv-container .tv-wrap .youtb iframe {width: 100%;}
 .tv-container .tv-wrap .tv .cnt {padding: 1em; font-weight: 300; color: #666;}
 .tv-container .tv-wrap .tv .cnt .sub-title {display: inline-block; background-color: #0096FF;	border-radius: 2px; font-size: 0.75em; padding: 0.25em; color: #fff;}
@@ -111,40 +112,36 @@ h2.title {font-size: 1.25em;}
 
 
 /********************** footer *********************/
-.menu-wrapper {margin-top: 3em;}
-.menu-wrapper, .footer-wrapper {font-weight: 300;}
+.footer-wrapper {color: #777; font-weight: 300;}
+.footer-wrapper .menu-wrapper {border-top: 1px solid #eee; border-bottom: 1px solid #444}
+.footer-wrapper .menu-wrapper .menu-wrap { display: flex; justify-content: space-between; align-items: center;}
+.footer-wrapper .menu-wrap .menu {display: flex;}
+.footer-wrapper .menu-wrap .menu li {padding: 0.7em .5em;}
+.footer-wrapper .menu-wrap .menu li:hover {text-decoration: underline; cursor: pointer;}
+.footer-wrapper .menu-wrap .menu li:nth-child(1) {padding-left: 0;}
+.footer-wrapper .menu-wrap .menu li:last-child {font-weight: 500;}
+.footer-wrapper .menu-wrap .sns {color: #bbb; font-size: 1.325em;}
+.footer-wrapper .menu-wrap .sns i:hover{color: #555; cursor: pointer;}
+.footer-wrapper .menu-wrap .sns i:nth-child(1){margin-right: .5em;}
+.footer-wrapper .link-wrap {display: flex; flex-wrap: wrap; padding: 1.5em 0;}
+.footer-wrapper .link-wrap a {padding: 0 0.5em 0.5em;}
+.footer-wrapper .link-wrap a:hover {color: #222; text-decoration: underline;}
+.footer-wrapper .link-wrap span {padding: 0 0.5em 0.5em;}
+.footer-wrapper .info-company {display: flex;}
+.footer-wrapper .info-company .logo-company {margin-right: 1em;}
+.footer-wrapper .info-cnt {display: flex; flex-wrap: wrap;}
+.footer-wrapper .info-wrap .cnt {padding-bottom: .5em;}
+.footer-wrapper .info-wrap .cnt a,
+.footer-wrapper .info-wrap .copyright {font-weight: 400;}
+.footer-wrapper .info-wrap .cnt a:hover {text-decoration: underline;}
+.footer-wrapper .info-wrap span {padding: 0 .5em .75em;}
 
-.menu-wrapper {border-top: 1px solid #eee; border-bottom: 1px solid #444}
-.menu-wrapper .menu-wrap {display: flex; justify-content: space-between; align-items: center;}
-.menu-wrapper .menu-wrap .menu {display: flex;}
-.menu-wrapper .menu-wrap .menu li {padding: 0.7em .5em;}
-.menu-wrapper .menu-wrap .menu li:hover {text-decoration: underline; cursor: pointer;}
-.menu-wrapper .menu-wrap .menu li:nth-child(1) {padding-left: 0;}
-.menu-wrapper .menu-wrap .menu li:last-child {font-weight: 500;}
-.menu-wrapper .menu-wrap .sns {color: #bbb; font-size: 1.325em;}
-.menu-wrapper .menu-wrap .sns i:hover{color: #555; cursor: pointer;}
-.menu-wrapper .menu-wrap .sns i:nth-child(1){margin-right: .5em;}
-
-.footer-wrapper {color: #777; padding-bottom: 2em;}
-.footer-wrap .link-wrap {display: flex; flex-wrap: wrap; padding: 1.5em 0;}
-.footer-wrap .link-wrap a {padding: 0 0.5em 0.5em;}
-.footer-wrap .link-wrap a:hover {color: #222; text-decoration: underline;}
-.footer-wrap .link-wrap span {padding: 0 0.5em 0.5em;}
-.footer-wrap .info-company {display: flex;}
-.footer-wrap .info-company .logo-company {margin-right: 1em;}
-.footer-wrap .info-cnt {display: flex; flex-wrap: wrap;}
-.footer-wrap .info-wrap .cnt {padding-bottom: .5em;}
-.footer-wrap .info-wrap .cnt a {color: #222;}
-.footer-wrap .info-wrap .cnt a:hover {text-decoration: underline;}
-.footer-wrap .info-wrap span {padding: 0 .5em .75em;}
-
-.emblem-wrapper {padding-top: 2em;}
-.emblem-wrapper .emblem-wrap {display: flex; justify-content: space-around;}
+.emblem-wrapper {padding: 2em 0;}
+.emblem-wrapper .emblem-wrap {display: flex; justify-content: space-around; flex-wrap: wrap;}
 
 
 /********************** player-wrapperr *********************/
-.player-wrapper {position: fixed; z-index: 100; width: 100%; left: 0; bottom: 0;
-	background: rgba(0, 0, 0, .7); backdrop-filter: blur(6px); padding: 1em 0; color: #fff;}
+.player-wrapper {display: none; position: fixed; z-index: 100; width: 100%; left: 0; bottom: 0; background: rgba(0, 0, 0, .7); backdrop-filter: blur(6px); padding: 1em 0; color: #fff;}
 .player-wrapper .player {display: flex; justify-content: center; align-items: center;}
 .player-wrapper .player .music {display: flex; align-items: center;}
 .player-wrapper .player .music .album {margin-right: 1.5em;}
@@ -163,38 +160,44 @@ h2.title {font-size: 1.25em;}
 }
 
 @media (max-width: 1199px) {
-	
+	.navi-wrapper .navi-wrap .navi > a,
+	.navi-wrapper .sub-wrapper .sub-wrap {width: 150px;}
+	.banner-container {width: 100%;}
+	.banner-container .swiper-container {width: 50%;}
+	.tv-container .tv-wrapper .tv-wrap .tv {width: 100%;}
+	.tv-container .tv-wrapper .tv-wrap .tv:last-child {display: none;}
 }
 
 @media (max-width: 991px) {
-	.slide-wrap-right {display: none;}
-	.chart-wrapper.week {display: none;}
-	.player-wrapper {display: none;}
-
-}
-
-@media (max-width: 767px) {
-	
-}
-
-@media (max-width: 575px) {
 	.header-wrapper .icon-wrap {font-size: 0.75em;}
-	.header-wrapper .icon-wrap .fa-bars {display: block;}
 	.header-wrapper .top-wrap .notice-bullet span {display: none;}
 	.header-wrapper .top-wrap .notice-bullet span {display: none;}
 	.header-wrapper .search-wrap {width: 100%;}
-	.header-wrapper .search-wrap .logo {display: none;}
-	.header-wrapper .search-wrap .m-logo {display: block; border: 1px solid red;}
 	.header-wrapper .player-wrap {display: none;}
-	.header-wrapper .navi-wrapper {display: none;}
+	.navi-wrapper .navi-wrap .navi > a,
+	.navi-wrapper .sub-wrapper .sub-wrap {width: 110px;}
 	.header-wrapper .m-navi-wrapper {display: block;}
+	.banner-container {width: 100%;}
+	.banner-container .swiper-container .swiper-slide {width: 100%;}
+	
+}
 
-	.chart-container .chart-wrap {width: 100vw;}
+@media (max-width: 767px) {
+	.player-wrapper {display: none;}
+}
+
+@media (max-width: 575px) {
+	.chart-container .chart-wrap {width: 100vw; font-size: 0.75em;}
 
 	.banner-container .slide-wrapper-right {display: none;}
 	.banner-container .swiper-container {width: 100%; height: 100%;}
 	.banner-container .swiper-wrapper img {width: 110%; align-items: center;}
 
-	.tv-container .tv-wrap .tv:nth-child(3) {display: none;}
-	.tv-container .tv-wrap .tv:nth-child(4) {display: none;}
+	.tv-container .tv-wrapper .tv-wrap .tv {width: 75%; margin: 0 auto;}
+	.tv-container .tv-wrapper .tv-wrap .tv:not(:first-child) {display: none;}
+
+	.footer-wrapper .menu-wrap .menu li:not(:last-child) {display: none;}
+	.footer-wrapper .footer-wrap .info-company {display: block;}
+	.footer-wrapper .footer-wrap .info-company .info-cnt {padding: 1em 0;}
+	.footer-wrapper .info-company .info-wrap span {display: none;}
 }

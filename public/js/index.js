@@ -7,7 +7,7 @@ function init() {
 	chart()
 	sildeBanner()
 	editor()
-	sildeEditor()
+	slideEditor()
 }
 
 function navi() {
@@ -25,7 +25,7 @@ function navi() {
 		$('.sub-container').stop().slideUp(300)
 	}
 	/*** 모바일 ***/ 
-	$('.m-navi-wrapper').slideUp(0)
+	$('.m-navi-wrap').slideUp(0)
 	$('.m-sub-wrap').slideUp(0)
 	$('.header-wrapper .fa-bars').on('click', openMoNavi)
 	$('.m-navi-wrapper .m-navi').on('click', openMoSubnavi)
@@ -110,37 +110,39 @@ function sildeBanner() {
 }
 
 function editor() {
-	var $slideWrapper = $('.editor-wrapper .swiper-wrapper')
+	var $editorWrap = $('.editor-wrapper .swiper-wrapper')
+	
 	function onGetData(r) {
 		r.editor.forEach(function(v, i) {
 			var html = '';
-			var html = '<div class="swiper-slide editor">';
-			var html = '<div><img src=" '+v.src+' " class="w-100"></div>';
-			var html = '<div class="cnt">';
-			var html = '<div class="sub-title">'+v.subTitle+'</div>';
-			var html = '<div class="title">'+v.title+'</div>';
-			var html = '<div class="ex">'+v.ex+'</div>';
-			var html = '</div>';
-			var html = '</div>';
-			$slideWrapper.append(html)
+			html += '<div class="swiper-slide editor">';
+			html += '<div><img src=" '+v.src+' " class="w-100"></div>';
+			html += '<div class="cnt">';
+			html += '<div class="sub-title">'+v.subTitle+'</div>';
+			html += '<div class="title">'+v.title+'</div>';
+			html += '<div class="ex">'+v.ex+'</div>';
+			html += '</div>';
+			html += '</div>';
+			$editorWrap.append(html);
 		})
 	}
 	$.get('../json/editor.json', onGetData)
 }
-function sildeEditor() {
+
+function slideEditor() {
 	var swiper = new Swiper(".editorMySwiper", {
 		slidesPerView: 4,
-		spaceBetween: 15,
 		slidesPerGroup: 4,
+		spaceBetween: 1,
 		loop: true,
 		loopFillGroupWithBlank: true,
-		pagination: {
-			el: ".swiper-pagination",
-			clickable: true,
-		},
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		},
+		breakpoints: {
+			768: { slidesPerView: 3, slidesPerGroup: 3,spaceBetween: 10 },
+			575: { slidesPerView: 2, slidesPerGroup: 2,spaceBetween: 10 },
+		}
 	});
 }
