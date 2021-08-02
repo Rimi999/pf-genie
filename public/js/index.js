@@ -28,7 +28,7 @@ function navi() {
 	function onNaviLeave() {
 		$('.sub-container').stop().slideUp(300)
 	}
-	/*** 모바일 ***/ 
+	/***** 모바일 *****/ 
 	$('.m-sub-wrap').slideUp(0)
 	$('.header-wrapper .fa-bars').on('click', openMoNavi)
 	$('.m-navi-wrapper .m-navi').on('click', openMoSubnavi)
@@ -38,9 +38,11 @@ function navi() {
 	}
 	function openMoSubnavi() {
 		$(this).find('.m-sub-wrap').stop().slideToggle(300)
+		$(this).addClass('active')
 	}
 	function closeMoSubnavi() {
 		$('.m-navi-wrapper').stop().slideUp(300)
+		$(this).removeClass('active')
 	}
 }
 

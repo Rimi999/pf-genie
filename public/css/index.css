@@ -52,7 +52,7 @@ h2.title {font-size: 1.25em;}
 .m-navi-wrapper .m-navi-wrap .m-navi > a {padding: 1em; color:#0096FF; width: 100%; background-color: #fff;
 border-bottom: 1px solid #ccc; display: flex; justify-content: space-between;}
 .m-navi-wrapper .m-navi-wrap .m-navi i {color: #555;}
-.m-navi-wrapper .m-navi-wrap .m-navi.active i {transition: t;}
+.m-navi-wrapper .m-navi-wrap .m-navi.active i {transform: rotate(180deg);}
 .m-navi-wrapper .m-navi-wrap .m-sub-wrap .sub {padding: 1em; font-weight: 300; background-color: #eee;
 	border-bottom: 1px solid #ddd;}
 
@@ -60,12 +60,9 @@ border-bottom: 1px solid #ccc; display: flex; justify-content: space-between;}
 /********************** recent-wrapper *********************/
 .recent-wrapper .slide-stage {overflow: hidden; position: relative; z-index: 9;}
 .recent-wrapper .slide-stage .slide-wrap {position: relative; min-height: 50vh; overflow: hidden;}
-.recent-wrapper .slide-wrap .slide {position: absolute; height: 100%;  width: 100%; background-position: center;
-	background-size: cover;}
+.recent-wrapper .slide-wrap .slide {position: absolute; height: 100%;  width: 100%; background-position: center; background-size: cover;}
 .recent-wrapper .slide-wrap .img-guide {position: relative; min-height: 50vh; margin: auto; display: block; min-width: 100%;}
-
-.recent-wrapper .bt-angle {font-size: 6em; position: absolute; top: 50%; transform: translateY(-50%);
-	cursor: pointer; color: #fff; opacity: .3; transition: all .5s; z-index: 999;}
+.recent-wrapper .bt-angle {font-size: 6em; position: absolute; top: 50%; transform: translateY(-50%); cursor: pointer; color: #fff; opacity: .3; transition: all .5s; z-index: 999;}
 .recent-wrapper .bt-angle:hover {opacity: 1;}
 .recent-wrapper .bt-angle.bt-prev {left: 0;}
 .recent-wrapper .bt-angle.bt-next {right: 0;}
@@ -97,7 +94,7 @@ border-bottom: 1px solid #ccc; display: flex; justify-content: space-between;}
 /********************** editor-wrapper *********************/
 .editor-wrapper {padding: 3em 0;}
 .editor-wrapper .swiper-container {padding: 1em 0;}
-.editor-wrapper .swiper-container .editor {border: 1px solid #ccc; width: 25%; margin: 0 1em;	color: #666; font-weight: 300;}
+.editor-wrapper .swiper-container .editor {width: 120px; border: 1px solid #ccc; margin: 0 1em;	color: #666; font-weight: 300;}
 .editor-wrapper .swiper-container .editor .cnt {padding: 1em;}
 .editor-wrapper .swiper-container .editor .title {color: #111; font-weight: 500; padding: 1em 0 2em;}
 .editor-wrapper .swiper-btn {margin: 0; padding: 0;}
