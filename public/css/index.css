@@ -48,7 +48,7 @@ h2.title {font-size: 1.25em;}
 .navi-wrapper .sub-wrap .sub:hover {background-color: #eee;}
 
 .m-navi-wrapper {background-color: #fff; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5); width: 100%;
-	position: absolute; display: none; z-index: 999;}
+	position: absolute; display: none; z-index: 999; display: none;}
 .m-navi-wrapper .m-navi-wrap .m-navi > a {padding: 1em; color:#0096FF; width: 100%; background-color: #fff;
 border-bottom: 1px solid #ccc; display: flex; justify-content: space-between;}
 .m-navi-wrapper .m-navi-wrap .m-navi i {color: #555;}
@@ -183,9 +183,6 @@ border-bottom: 1px solid #ccc; display: flex; justify-content: space-between;}
 
 @media (max-width: 767px) {
 	.player-wrapper {display: none;}
-}
-
-@media (max-width: 575px) {
 	.header-wrapper .top-wrap .notice-bullet span {display: none;}
 	.header-wrapper .search-wrapper {width: 100%;}
 	.header-wrapper .search-wrapper .logo-wrap .logo {display: none;}
@@ -193,6 +190,10 @@ border-bottom: 1px solid #ccc; display: flex; justify-content: space-between;}
 	.header-wrapper .search-wrapper .icon-wrap .fa-bars {display: block;}
 	.header-wrapper .search-wrapper .search {width: 70%; margin: 0 0.5em;}
 	.header-wrapper .navi-wrapper {display: none;}
+	.m-navi-wrapper {display: block;}
+}
+
+@media (max-width: 575px) {
 	.chart-container .chart-wrapper .chart-wrap {font-size: 0.75em;}
 	.banner-container .slide-wrapper-right {display: none;}
 	.banner-container .swiper-container {width: 100%;}
