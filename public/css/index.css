@@ -94,7 +94,7 @@ border-bottom: 1px solid #ccc; display: flex; justify-content: space-between;}
 /********************** editor-wrapper *********************/
 .editor-wrapper {padding: 3em 0;}
 .editor-wrapper .swiper-container {padding: 1em 0;}
-.editor-wrapper .swiper-container .editor {width: 120px; border: 1px solid #ccc; margin: 0 1em;	color: #666; font-weight: 300;}
+.editor-wrapper .swiper-container .editor {width: 200px; border: 1px solid #ccc; margin: 0 1em;	color: #666; font-weight: 300;}
 .editor-wrapper .swiper-container .editor .cnt {padding: 1em;}
 .editor-wrapper .swiper-container .editor .title {color: #111; font-weight: 500; padding: 1em 0 2em;}
 .editor-wrapper .swiper-btn {margin: 0; padding: 0;}
@@ -193,7 +193,7 @@ border-bottom: 1px solid #ccc; display: flex; justify-content: space-between;}
 	.header-wrapper .search-wrapper .icon-wrap .fa-bars {display: block;}
 	.header-wrapper .search-wrapper .search {width: 70%; margin: 0 0.5em;}
 	.header-wrapper .navi-wrapper {display: none;}
-	.chart-container .chart-wrapper .chart-wrap .title-wrap { font-size: 0.75em;}
+	.chart-container .chart-wrapper .chart-wrap {font-size: 0.75em;}
 	.banner-container .slide-wrapper-right {display: none;}
 	.banner-container .swiper-container {width: 100%;}
 	.banner-container .swiper-container .swiper-slide img {width: 110%;}
