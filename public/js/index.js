@@ -142,9 +142,9 @@ function editor() {
 
 function slideEditor() {
 	var swiper = new Swiper(".editorMySwiper", {
-		slidesPerView: 3,
-		spaceBetween: 30,
-		slidesPerGroup: 3,
+		slidesPerView: 4,
+		spaceBetween: 10,
+		slidesPerGroup: 4,
 		loop: true,
 		loopFillGroupWithBlank: true,
 		pagination: {
