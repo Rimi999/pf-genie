@@ -13,7 +13,7 @@ h2.title {font-size: 1.25em;}
 
 
 /********************** header-wrapper *********************/
-.header-wrapper {position: relative; z-index: 99; padding: 1em 0;}
+.header-wrapper {position: relative; z-index: 99;}
 .header-wrapper .icon-wrap {display: flex;}
 .header-wrapper .icon-wrap .fa-bars {margin-left: .5em; display: none;}
 .header-wrapper .top-wrapper {background-color: #ecf8ff;}
@@ -27,8 +27,7 @@ h2.title {font-size: 1.25em;}
 .top-wrapper .player-wrap .fa {color: #ccc; cursor: pointer;}
 .top-wrapper .player-wrap .fa:nth-child(1) {color: #0096FF;}
 .top-wrapper .player-wrap .fa:nth-child(2) {margin: 0 0.25em;}
-
-.search-wrapper {padding: 1em 0;}
+.search-wrapper {padding: 2em 0;}
 .search-wrapper .search-wrap {display: flex; justify-content: center; align-items: center;}
 .search-wrapper .search-wrap .logo {width: 120px;}
 .search-wrapper .search-wrap .m-logo {width: 16px; display: none;}
