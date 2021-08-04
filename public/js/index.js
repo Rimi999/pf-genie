@@ -8,6 +8,7 @@ function init() {
 	sildeBanner()
 	editor()
 	slideEditor()
+	player()
 }
 
 function navi() {
@@ -29,7 +30,8 @@ function navi() {
 		$('.sub-container').stop().slideUp(300)
 	}
 	/***** 모바일 *****/ 
-	$('.m-navi-wrapper').slideUp(0)
+	$('.m-navi-wrap').slideUp(0)
+	$('.m-sub-wrap').slideUp(0)
 	$('.header-wrapper .fa-bars').on('click', openMoNavi)
 	$('.m-navi-wrapper .m-navi').on('click', openMoSubnavi)
 	$('.m-sub-wrap').on('click', closeMoSubnavi)
@@ -138,22 +140,38 @@ function editor() {
 	$.get('../json/editor.json', onGetData)
 }
 
-
 function slideEditor() {
 	var swiper = new Swiper(".editorMySwiper", {
 		slidesPerView: 4,
-		spaceBetween: 10,
+		spaceBetween: 30,
 		slidesPerGroup: 4,
 		loop: true,
 		loopFillGroupWithBlank: true,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		},
-		breakpoints: {
-			767 : { slidesPerView : 3, slidesPerGroup: 3 },
-			575 : { slidesPerView : 2, slidesPerGroup: 2 }
-		}
 	});
 }
 
+function player() {
+	$('.player-wrapper .bt-close').on('click', playerClose)
+	$('.player-wrapper .bi-play-fill').on('click', play)
+	$('.player-wrapper .bi-pause-fill').on('click', stop)
+
+	function stop() {
+		$('.player-wrapper .bi-play-fill').css('display', 'block')
+		$('.player-wrapper .bi-pause-fill').css('display', 'none')
+	}
+	function play() {
+		$('.player-wrapper .bi-play-fill').css('display', 'none')
+		$('.player-wrapper .bi-pause-fill').css('display', 'block')
+	}
+	function playerClose() {
+		$('.player-wrapper').css('display', 'none')
+	}
+}
