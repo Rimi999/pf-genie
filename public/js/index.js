@@ -125,7 +125,7 @@ function editor() {
 		r.editor.forEach(function(v, i) {
 			var html = '';
 			html += '<div class="swiper-slide editor">';
-			html += '<div><img src="'+v.src+'"></div>';
+			html += '<div><img src="'+v.src+'" class="img"></div>';
 			html += '<div class="cnt">';
 			html += '<div class="sub-title">'+v.subTitle+'</div>';
 			html += '<div class="title">'+v.title+'</div>';
@@ -141,10 +141,9 @@ function editor() {
 
 function slideEditor() {
 	var swiper = new Swiper(".editorMySwiper", {
-		slidesPerView: 4,
-		slidesPerGroup: 4,
 		loop: true,
 		loopFillGroupWithBlank: true,
+		spaceBetween: 10,
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
@@ -153,7 +152,12 @@ function slideEditor() {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		},
-		
+		breakpoints: {
+			1399: {	slidesPerView: 4,	slidesPerGroup: 4,},
+			991: {	slidesPerView: 3,	slidesPerGroup: 3,},
+			767: {	slidesPerView: 2,	slidesPerGroup: 2,},
+			575: {	slidesPerView: 1,	slidesPerGroup: 1,},
+		}
 	});
 }
 
