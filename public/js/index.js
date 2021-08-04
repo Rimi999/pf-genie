@@ -7,7 +7,6 @@ function init() {
 	chart()
 	sildeBanner()
 	editor()
-	slideEditor()
 	player()
 }
 
@@ -122,12 +121,11 @@ function sildeBanner() {
 
 function editor() {
 	var $editorWrap = $('.editor-wrapper .swiper-wrapper')
-	
 	function onGetData(r) {
 		r.editor.forEach(function(v, i) {
 			var html = '';
 			html += '<div class="swiper-slide editor">';
-			html += '<div><img src="'+v.src+'" class="w-100"></div>';
+			html += '<div><img src="'+v.src+'"></div>';
 			html += '<div class="cnt">';
 			html += '<div class="sub-title">'+v.subTitle+'</div>';
 			html += '<div class="title">'+v.title+'</div>';
@@ -136,14 +134,14 @@ function editor() {
 			html += '</div>';
 			$editorWrap.append(html);
 		})
-	}
+		slideEditor();
+		}
 	$.get('../json/editor.json', onGetData)
 }
 
 function slideEditor() {
 	var swiper = new Swiper(".editorMySwiper", {
 		slidesPerView: 4,
-		spaceBetween: 10,
 		slidesPerGroup: 4,
 		loop: true,
 		loopFillGroupWithBlank: true,
@@ -155,6 +153,7 @@ function slideEditor() {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		},
+		
 	});
 }
 
