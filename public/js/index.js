@@ -6,8 +6,8 @@ function init() {
 	times()
 	chart()
 	sildeBanner()
-	slideEditor()
 	editor()
+	slideEditor()
 }
 
 function navi() {
@@ -29,7 +29,7 @@ function navi() {
 		$('.sub-container').stop().slideUp(300)
 	}
 	/***** 모바일 *****/ 
-	$('.m-sub-wrap').slideUp(0)
+	$('.m-navi-wrapper').slideUp(0)
 	$('.header-wrapper .fa-bars').on('click', openMoNavi)
 	$('.m-navi-wrapper .m-navi').on('click', openMoSubnavi)
 	$('.m-sub-wrap').on('click', closeMoSubnavi)
@@ -118,24 +118,6 @@ function sildeBanner() {
 	});
 }
 
-function slideEditor() {
-	var swiper = new Swiper(".editorMySwiper", {
-		slidesPerView: 4,
-		spaceBetween: 30,
-		slidesPerGroup: 4,
-		loop: true,
-		loopFillGroupWithBlank: true,
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
-		breakpoints: {
-			767 : { slidesPerView : 2, slidesPerGroup: 2 },
-			575 : { slidesPerView : 1, slidesPerGroup: 1 }
-		}
-	});
-}
-
 function editor() {
 	var $editorWrap = $('.editor-wrapper .swiper-wrapper')
 	
@@ -154,5 +136,24 @@ function editor() {
 		})
 	}
 	$.get('../json/editor.json', onGetData)
+}
+
+
+function slideEditor() {
+	var swiper = new Swiper(".editorMySwiper", {
+		slidesPerView: 4,
+		spaceBetween: 10,
+		slidesPerGroup: 4,
+		loop: true,
+		loopFillGroupWithBlank: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {
+			767 : { slidesPerView : 3, slidesPerGroup: 3 },
+			575 : { slidesPerView : 2, slidesPerGroup: 2 }
+		}
+	});
 }
 
