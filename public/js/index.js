@@ -97,7 +97,7 @@ function chart() {
 			var html = '';
 			html += '<li class="chart">'
 			html += '<div class="rank">' + v.id + '</div>'
-			html += '<div><img src="' + v.src + '"></div>'
+			html += '<div><img src="' + v.src + '" ></div>'
 			html += '<div class="sing">' + v.sing + '</div>'
 			html += '<div class="singer">' + v.singer + '</div>'
 			html += '</li>'
@@ -108,57 +108,39 @@ function chart() {
 }
 
 function sildeBanner() {
-	var swiper = new Swiper(".bannerMySwiper", {
+	var swiper = new Swiper('.banner-wrapper .mySwiper', {
 		spaceBetween: 30,
 		loop: true,
 		autoplay: { delay: 2000 },
 		pagination: {
-			el: ".banner-swiper-pagination",
+			el: '.banner-swiper-pagination',
 			clickable: true,
-		},
+		}
 	});
 }
 
 function editor() {
-	var $editorWrap = $('.editor-wrapper .swiper-wrapper')
 	function onGetData(r) {
+		var $editorWrapper = $('.editor-wrapper')
+		var $Wrapper = $editorWrapper.find('.swiper-wrapper')
 		r.editor.forEach(function(v, i) {
-			var html = '';
-			html += '<div class="swiper-slide editor">';
-			html += '<div><img src="'+v.src+'" class="img"></div>';
-			html += '<div class="cnt">';
-			html += '<div class="sub-title">'+v.subTitle+'</div>';
-			html += '<div class="title">'+v.title+'</div>';
-			html += '<div class="ex">'+v.ex+'</div>';
-			html += '</div>';
-			html += '</div>';
-			$editorWrap.append(html);
+			var html = ''
+			html += '<div class="swiper-slide editor">'
+			html += '<div><img src="'+v.src+'" class="img"></div>'
+			html += '<div class="cnt">'
+			html += '<div class="sub-title">'+v.subTitle+'</div>'
+			html += '<div class="title">'+v.title+'</div>'
+			html += '<div class="ex">'+v.ex+'</div>'
+			html += '</div>'
+			html += '</div>'
+			$Wrapper.append(html);
 		})
-		slideEditor();
-		}
+		var swiper = getSwiper('.editor-wrapper', {
+			break: 4,
+			pager: false
+		})
+	}
 	$.get('../json/editor.json', onGetData)
-}
-
-function slideEditor() {
-	var swiper = new Swiper(".editorMySwiper", {
-		loop: true,
-		loopFillGroupWithBlank: true,
-		spaceBetween: 10,
-		pagination: {
-			el: ".swiper-pagination",
-			clickable: true,
-		},
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
-		breakpoints: {
-			1399: {	slidesPerView: 4,	slidesPerGroup: 4,},
-			991: {	slidesPerView: 3,	slidesPerGroup: 3,},
-			767: {	slidesPerView: 2,	slidesPerGroup: 2,},
-			575: {	slidesPerView: 1,	slidesPerGroup: 1,},
-		}
-	});
 }
 
 function player() {
